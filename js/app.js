@@ -24,7 +24,7 @@ setInterval(createLeaf,900);
 // exactamente al día del buffet.
 // Formato recomendado: YYYY-MM-DDTHH:MM:SS-06:00
 // ============================================================
-const EVENT_DATE = new Date("2026-11-03T09:00:00-12:00").getTime();
+const EVENT_DATE = new Date("2026-11-10T09:00:00-11:00").getTime();
 
 function updateCountdown() {
   const now = Date.now();
