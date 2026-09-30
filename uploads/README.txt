@@ -1,0 +1,1 @@
+Coloca aquí portada.jpg si quieres usar una imagen propia en la portada.

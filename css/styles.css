@@ -1,0 +1,506 @@
+:root {
+  --cream: #f4eee5;
+  --paper: #fbf8f2;
+  --brown: #39281f;
+  --brown-soft: #674b3b;
+  --amber: #b47a35;
+  --copper: #8f5139;
+  --line: rgba(57, 40, 31, .18);
+  --white: #fffdf8;
+  --shadow: 0 18px 50px rgba(57, 40, 31, .10);
+}
+
+/* =========================================================
+   1. CONFIGURACIÓN GENERAL
+   Tipografías, colores y comportamiento base.
+   ========================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--brown);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* =========================================================
+   2. HERO / PORTADA
+   ========================================================= */
+.hero {
+  min-height: 100svh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(44, 28, 20, .48), rgba(44, 28, 20, .62)),
+    url("../uploads/portada.jpg") center/cover no-repeat,
+    radial-gradient(circle at 50% 30%, #c18a4e, #3a281f 75%);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(255, 253, 248, .38);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(90%, 650px);
+  padding: 50px 20px;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(4rem, 17vw, 8rem);
+  font-weight: 500;
+  line-height: .8;
+  letter-spacing: -.045em;
+}
+
+.hero h1 span {
+  font-style: italic;
+  color: #d4a55f;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .28em;
+  font-size: .68rem;
+  font-weight: 600;
+}
+
+.hero-subtitle {
+  margin-top: 22px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  letter-spacing: .12em;
+}
+
+.hero-note {
+  max-width: 400px;
+  margin: 25px auto 30px;
+  font-size: .85rem;
+  opacity: .9;
+}
+
+.ornament {
+  margin: 24px 0;
+  color: #d4a55f;
+  font-size: 1.2rem;
+}
+
+/* =========================================================
+   3. SECCIONES GENERALES
+   ========================================================= */
+.section {
+  width: min(100% - 36px, 980px);
+  margin: 0 auto;
+  padding: 90px 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading h2,
+.intro h2,
+.closing h2 {
+  margin: 8px 0 18px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.7rem, 10vw, 4.5rem);
+  font-weight: 500;
+  line-height: .95;
+}
+
+.section-heading > p:last-child,
+.intro > p:last-child {
+  max-width: 580px;
+  margin: 0 auto;
+  color: var(--brown-soft);
+}
+
+.intro {
+  text-align: center;
+}
+
+/* =========================================================
+   4. DATOS DEL EVENTO
+   ========================================================= */
+.event-section {
+  border-top: 1px solid var(--line);
+}
+
+.event-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.event-card {
+  padding: 30px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.card-icon {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--amber);
+  font-size: .7rem;
+  letter-spacing: .2em;
+}
+
+.event-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.event-card p {
+  margin-top: 4px;
+  font-size: .82rem;
+}
+
+/* =========================================================
+   5. CONTADOR
+   ========================================================= */
+.countdown {
+  margin-top: 55px;
+  padding: 30px 15px;
+  text-align: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.countdown-title {
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  font-size: .65rem;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.countdown-grid strong {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+.countdown-grid span {
+  display: block;
+  font-size: .55rem;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  opacity: .65;
+}
+
+/* =========================================================
+   6. MENÚ
+   ========================================================= */
+.menu-section {
+  background: var(--brown);
+  color: var(--white);
+  width: 100%;
+  max-width: none;
+  padding-left: max(18px, calc((100% - 944px) / 2));
+  padding-right: max(18px, calc((100% - 944px) / 2));
+}
+
+.menu-section .section-heading > p:last-child {
+  color: rgba(255, 253, 248, .68);
+}
+
+.menu-list {
+  border-top: 1px solid rgba(255, 253, 248, .18);
+}
+
+.menu-item {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 12px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 253, 248, .18);
+}
+
+.menu-item > span {
+  color: #d4a55f;
+  font-size: .7rem;
+}
+
+.menu-item h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.menu-item p {
+  color: rgba(255, 253, 248, .68);
+  font-size: .78rem;
+}
+
+/* =========================================================
+   7. FORMULARIOS
+   ========================================================= */
+.rsvp-form,
+.gallery-form {
+  display: grid;
+  gap: 17px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  display: grid;
+  gap: 7px;
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  color: var(--brown);
+  padding: 14px 15px;
+  outline: none;
+  border-radius: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--amber);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  padding: 13px 24px;
+  border: 1px solid var(--brown);
+  background: var(--brown);
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .65rem;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: var(--amber);
+  border-color: var(--amber);
+}
+
+.button-light {
+  border-color: var(--white);
+  background: transparent;
+}
+
+.button-outline {
+  margin-top: 25px;
+  background: transparent;
+  color: var(--brown);
+}
+
+.form-message {
+  min-height: 25px;
+  font-size: .75rem;
+  text-align: center;
+}
+
+/* =========================================================
+   8. MAPA
+   ========================================================= */
+.location-section {
+  text-align: center;
+}
+
+.map-wrapper {
+  overflow: hidden;
+  height: 420px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* =========================================================
+   9. GALERÍA
+   ========================================================= */
+.gallery-form {
+  margin-bottom: 45px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7px;
+}
+
+.gallery-grid figure {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: var(--cream);
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+
+.gallery-grid figure:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-grid figcaption {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  padding: 5px 8px;
+  background: rgba(57, 40, 31, .75);
+  color: white;
+  font-size: .58rem;
+}
+
+.gallery-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+/* =========================================================
+   10. CIERRE Y FOOTER
+   ========================================================= */
+.closing {
+  text-align: center;
+  padding-bottom: 110px;
+}
+
+.closing h2 {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.closing p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem;
+}
+
+footer {
+  padding: 25px 18px;
+  background: var(--brown);
+  color: rgba(255, 253, 248, .65);
+  text-align: center;
+  font-size: .6rem;
+  letter-spacing: .08em;
+}
+
+/* =========================================================
+   11. ANIMACIONES AL HACER SCROLL
+   .reveal comienza oculto y JS agrega .visible.
+   ========================================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 700px) {
+  .event-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* =========================================================
+   APERTURA CON SOBRE Y SELLO
+   ========================================================= */
+body.locked{height:100svh;overflow:hidden}.opening-screen{position:fixed;inset:0;z-index:1000;background:#39281f;color:#fffdf8;display:grid;place-items:center;text-align:center;transition:opacity 1s,visibility 1s}.opening-screen.opened{opacity:0;visibility:hidden;pointer-events:none}.opening-screen h1{position:absolute;top:11%;font:500 clamp(3.2rem,13vw,6rem)/.9 "Cormorant Garamond",serif}.opening-screen h1 span{color:#d4a55f;font-style:italic}.opening-kicker,.opening-hint{position:absolute;text-transform:uppercase;letter-spacing:.22em;font-size:.62rem}.opening-kicker{top:7%}.opening-hint{bottom:8%;opacity:.7}.envelope{position:relative;width:min(78vw,380px);aspect-ratio:1.45;filter:drop-shadow(0 30px 35px rgba(0,0,0,.3))}.envelope-body{position:absolute;inset:0;background:#e9ddcd}.envelope-body:before,.envelope-body:after{content:"";position:absolute;bottom:0;width:52%;height:100%;background:#ddcbb5}.envelope-body:before{left:0;clip-path:polygon(0 0,100% 100%,0 100%)}.envelope-body:after{right:0;clip-path:polygon(100% 0,100% 100%,0 100%)}.envelope-flap{position:absolute;z-index:3;inset:0 0 auto;height:72%;background:#f3e8d8;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform 1s cubic-bezier(.7,0,.2,1)}.envelope.open .envelope-flap{transform:rotateX(180deg)}.seal{position:absolute;z-index:5;left:50%;top:52%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;border:1px solid #f5d99c;background:#8f5139;color:#fceac5;font:500 20px "Cormorant Garamond",serif;box-shadow:0 8px 25px rgba(0,0,0,.25);transition:.35s}.seal:hover{transform:translate(-50%,-50%) scale(1.08)}.envelope.open .seal{animation:sealAway .7s forwards}@keyframes sealAway{to{opacity:0;transform:translate(-50%,-100%) scale(.7)}}
+/* Hojas otoñales */#fallingLeaves{position:fixed;inset:0;z-index:20;pointer-events:none;overflow:hidden}.leaf{position:absolute;top:-30px;width:13px;height:20px;border-radius:100% 0 100% 0;background:#b47a35;opacity:.55;animation:fall linear forwards}.leaf:nth-child(3n){background:#9b5e3c}.leaf:nth-child(4n){background:#c28b48}.leaf:nth-child(5n){background:#6e4934}@keyframes fall{0%{transform:translateY(-40px) rotate(0)}50%{margin-left:30px}100%{transform:translateY(110vh) rotate(500deg);margin-left:-20px}}
+/* Música */.music-button{position:fixed;z-index:50;right:15px;bottom:15px;border:1px solid rgba(57,40,31,.25);background:rgba(251,248,242,.92);color:#39281f;padding:9px 12px;text-transform:uppercase;letter-spacing:.08em;font-size:.55rem}.music-button.playing{background:#39281f;color:#fffdf8}

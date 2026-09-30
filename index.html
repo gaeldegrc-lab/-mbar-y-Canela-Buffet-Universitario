@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Invitación al buffet Ámbar y Canela">
+  <title>Ámbar y Canela | Invitación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="locked">
+<div id="opening" class="opening-screen"><p class="opening-kicker">Una invitación especial</p><h1>Ámbar <span>&</span> Canela</h1><div class="envelope" id="envelope"><div class="envelope-flap"></div><div class="envelope-body"></div><button id="openInvitation" class="seal">A&C</button></div><p class="opening-hint">Toca el sello para abrir</p></div>
+<div id="fallingLeaves" aria-hidden="true"></div>
+<button id="musicButton" class="music-button">♫ <span id="musicText">Música</span></button><audio id="backgroundMusic" loop><source src="music/ambiente.mp3" type="audio/mpeg"></audio>
+  <!-- =========================================================
+       1. PORTADA / HERO
+       Cambia aquí el nombre y la frase principal del evento.
+       ========================================================= -->
+  <header class="hero reveal">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Una celebración para compartir</p>
+      <h1>Ámbar <span>&</span> Canela</h1>
+      <p class="hero-subtitle">Buffet de temporada</p>
+      <div class="ornament">✦</div>
+      <p class="hero-note">Una tarde de sabores, aromas y momentos para recordar.</p>
+      <a href="#evento" class="button button-light">Abrir invitación</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         2. INTRODUCCIÓN
+         ========================================================= -->
+    <section class="section intro reveal">
+      <p class="eyebrow">Estás invitado</p>
+      <h2>Una mesa hecha para compartir</h2>
+      <p>
+        Te esperamos para disfrutar una experiencia gastronómica inspirada
+        en los tonos, aromas y sabores del otoño.
+      </p>
+    </section>
+
+     <!-- =========================================================
+         3. DATOS DEL EVENTO
+         Modifica la fecha ISO y los textos de fecha/hora/lugar.
+         El contador usa EVENT_DATE en js/app.js.
+         ========================================================= -->
+    <section id="evento" class="section event-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Reserva la fecha</p>
+        <h2>El momento</h2>
+      </div>
+
+      <div class="event-grid">
+        <article class="event-card reveal">
+          <span class="card-icon">01</span>
+          <h3>Fecha</h3>
+          <p>03 de noviembre de 2026</p>
+        </article>
+
+        <article class="event-card reveal">
+          <span class="card-icon">02</span>
+          <h3>Hora</h3>
+          <p>9:00 horas</p>
+        </article>
+
+        <article class="event-card reveal">
+          <span class="card-icon">03</span>
+          <h3>Lugar</h3>
+          <p>Universidad de Ciencias y Artes de Chiapas</p>
+        </article>
+      </div>
+
+      <!-- =======================================================
+           4. CONTADOR
+           ======================================================= -->
+      <div class="countdown reveal">
+        <p class="countdown-title">Faltan</p>
+        <div class="countdown-grid">
+          <div><strong id="days">00</strong><span>Días</span></div>
+          <div><strong id="hours">00</strong><span>Horas</span></div>
+          <div><strong id="minutes">00</strong><span>Minutos</span></div>
+          <div><strong id="seconds">00</strong><span>Segundos</span></div>
+        </div>
+      </div>
+    </section>
+
+     <!-- =========================================================
+         5. MENÚ
+         Agrega o elimina categorías según tu buffet.
+         ========================================================= -->
+    <section id="menu" class="section menu-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">La mesa</p>
+        <h2>Menú</h2>
+        <p>Una selección pensada para la temporada.</p>
+      </div>
+
+      <div class="menu-list">
+        <article class="menu-item reveal">
+          <span>01</span>
+          <div>
+            <h3>Platos Fuertes</h3>
+            <p>Cochito · Chilaquiles rojos · Enchiladas suizas</p>
+          </div>
+        </article>
+
+        <article class="menu-item reveal">
+          <span>02</span>
+          <div>
+            <h3>Caldoso</h3>
+            <p>Barbacoa con su consomé</p>
+          </div>
+        </article>
+
+        <article class="menu-item reveal">
+          <span>03</span>
+          <div>
+            <h3>Estación en Vivo</h3>
+            <p>Huevos al Gusto con: Jamón, Champiñones, Chorizo · Huevos Rancheros · Omelettes · Quesadillas</p>
+          </div>
+        </article>
+
+ <article class="menu-item reveal">
+          <span>04</span>
+          <div>
+            <h3>Guarniciones</h3>
+            <p>Frijol refrito · Plátanos fritos · Empanadas de chipilín</p>
+          </div>
+        </article>
+
+         <article class="menu-item reveal">
+          <span>05</span>
+          <div>
+            <h3>Bocadillos</h3>
+            <p>Tostada de camote · Rollo de pepino con hummus · Tartaleta de cebolla · Tabla de charcutería</p>
+          </div>
+        </article>
+
+<article class="menu-item reveal">
+          <span>06</span>
+          <div>
+            <h3>Fruta</h3>
+            <p>Papaya · Melón · Sandia</p>
+          </div>
+        </article>
+
+
+        <article class="menu-item reveal">
+          <span>07</span>
+          <div>
+            <h3>Panes</h3>
+            <p>Roles · Pan de muerto · Croissant · Churros</p>
+          </div>
+        </article>
+
+ <article class="menu-item reveal">
+          <span>08</span>
+          <div>
+            <h3>Postres</h3>
+            <p>Tartaletas de Fruta · Cheescake · Flan de Cafe</p>
+          </div>
+        </article>
+
+        <article class="menu-item reveal">
+          <span>09</span>
+          <div>
+            <h3>Bebidas Frías</h3>
+            <p>Tascalate · Cordial de maracuyá</p>
+          </div>
+        </article>
+
+          <article class="menu-item reveal">
+          <span>10</span>
+          <div>
+            <h3>Bebidas Calientes</h3>
+            <p>Café Americano · Café de olla · Chocolate</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+   <!-- =========================================================
+     6. CONFIRMACIÓN DE ASISTENCIA
+     El botón dirige al formulario de Google Forms.
+     ========================================================= -->
+<section id="confirmar" class="section rsvp-section">
+  <div class="section-heading reveal">
+    <p class="eyebrow">Tu lugar en la mesa</p>
+    <h2>Confirma tu asistencia</h2>
+    <p>Ayúdanos a preparar todo especialmente para ti.</p>
+  </div>
+
+  <div class="rsvp-form reveal">
+
+    <div class="rsvp-intro">
+      <p>
+        Para confirmar tu asistencia, completa nuestro formulario.
+        Nos ayudará a organizar cada detalle de tu lugar en la mesa.
+      </p>
+    </div>
+
+    <a 
+      href="https://docs.google.com/forms/d/e/1FAIpQLSeawcjvUBB9W_xMZXxMrE_8StrMJZRYJg0aKgLlodyi7AcHCw/viewform?usp=publish-editor"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="button">
+      Confirmar asistencia
+    </a>
+
+  </div>
+</section>
+
+    <!-- =========================================================
+         7. UBICACIÓN / GOOGLE MAPS
+         Reemplaza el src del iframe por el código de inserción
+         que te dé Google Maps para tu ubicación exacta.
+         ========================================================= -->
+    <section id="ubicacion" class="section location-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Cómo llegar</p>
+        <h2>El lugar</h2>
+      </div>
+
+      <div class="map-wrapper reveal">
+        <iframe
+          title="Mapa de la ubicación del evento"
+          src="https://www.google.com/maps?q=Universidad%20de%20Ciencias%20y%20Artes%20de%20Chiapas%20Tuxtla%20Guti%C3%A9rrez&output=embed"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <a
+        class="button button-outline reveal"
+        href="https://www.google.com/maps/search/?api=1&query=Universidad+de+Ciencias+y+Artes+de+Chiapas+Tuxtla+Gutierrez"
+        target="_blank"
+        rel="noopener">
+        Abrir en Google Maps
+      </a>
+    </section>
+
+   <!-- =========================================================
+     8. GALERÍA DE RECUERDOS
+     Las fotografías se reciben mediante Google Forms.
+     ========================================================= -->
+<section id="galeria" class="section gallery-section">
+
+  <div class="section-heading reveal">
+    <p class="eyebrow">Nuestros recuerdos</p>
+    <h2>Galería</h2>
+    <p>
+      Después del evento podremos guardar aquí fotografías
+      de nuestra celebración.
+    </p>
+  </div>
+
+  <div class="gallery-upload reveal">
+
+    <p class="gallery-description">
+      ¿Tienes una fotografía bonita de este día?
+      Compártela con nosotros para formar parte de nuestros recuerdos.
+    </p>
+
+    <div class="gallery-button">
+  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLSclHFAZVy_4cXnDlkLZ1MMg2M3cOkpaImzH3vPl5qnqcTR0QQ/viewform?usp=header"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="button">
+    Compartir una fotografía
+  </a>
+</div>
+  </div>
+
+  <div id="galleryGrid" class="gallery-grid">
+    <!-- Aquí aparecerán las fotografías de la galería. -->
+  </div>
+
+</section>
+
+    <!-- =========================================================
+         9. CIERRE
+         ========================================================= -->
+    <section class="section closing reveal">
+      <div class="ornament">✦</div>
+      <h2>Nos encantará compartir esta mesa contigo.</h2>
+      <p>Ámbar y Canela</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Ámbar y Canela · Invitación digital</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
